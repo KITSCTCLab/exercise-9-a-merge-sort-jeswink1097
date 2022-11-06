@@ -1,7 +1,5 @@
 from typing import List
 
-def merge_sort(data) -> None:
-  # Write code here
 def merge_sort(data):
     if len(data)>1:
         mid = len(data)//2
@@ -19,16 +17,6 @@ def merge_sort(data):
                 data[k]=righthalf[j]
                 j=j+1
             k=k+1
-           
-input_data = input()
-data = []
-for item in input_data.split(', '):
-  if item.isnumeric()
-     data.append(int(item))
-  elif item.lstrip("-").isnumeric():
-     data.append(int(item))
-merge_sort(data)
-print(data)
 
         while i < len(lefthalf):
             data[k]=lefthalf[i]
@@ -39,3 +27,15 @@ print(data)
             data[k]=righthalf[j]
             j=j+1
             k=k+1
+
+
+# Do not change the following code
+input_data = input()
+data = []
+for item in input_data.split(', '):
+  if item.isnumeric():
+    data.append(int(item))
+  elif item.lstrip("-").isnumeric():
+    data.append(int(item))
+merge_sort(data)
+print(data)
